@@ -364,6 +364,7 @@ nv.models.stackedAreaChart = function() {
                         //If we are in 'expand' mode, use the stacked percent value instead of raw value.
                         var tooltipValue = (stacked.style() == 'expand') ? point.display.y : chart.y()(point,pointIndex);
                         allData.push({
+                            point: point,
                             key: series.key,
                             value: tooltipValue,
                             color: color(series,series.seriesIndex),
